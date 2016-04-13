@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Educio</title>
+</head>
+<body>
+
+<div id="header">
+	<%- include partials/header.ejs %>
+</div>
+
+<div id="main-content">
+	<% teacher.classes.forEach(function(classObj) { %>
+	  <a href="/class/<%= classObj._id %>"><%= classObj.name %></a>
+	<% }) %>
+</div>
+
+<%- include partials/footer.ejs %>
+
+</body>
+</html>
